@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f8ff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-btn {
+  background-color: transparent;
+  font-size: 1rem;
+  border: none;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header__title {
+  font-weight: 700;
+}
+.header__count {
+  padding: 0.2rem 0.5rem;
+  background-color: #0606b1;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.3rem;
+}
+.header__button {
+  font-size: 300;
+  opacity: 0.5;
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notification {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 1rem;
+  gap: 1rem;
+  padding: 1rem;
+}
+.notification__message {
+  font-size: 1.2rem;
+}
+.notification__message-text {
+  margin-top: 1rem;
+  border: 1px solid gray;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.notification__message-text:hover {
+  cursor: pointer;
+}
+.notification__time {
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+.notification__comment-image {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.unseen {
+  background-color: #f0f8ff;
+}
+.unseen > .notification__info > .notification__message::after {
+  content: "";
+  display: inline-block;
+  margin-bottom: 0.1rem;
+  line-height: 100%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgb(216, 85, 85);
+  border-radius: 50%;
+}
+
+.sender-image {
+  width: 3rem;
+  height: 3rem;
+  align-self: flex-start;
+}
+
+.active-state:hover {
+  cursor: pointer;
+  color: rgb(42, 97, 197);
+}
+
+.gray {
+  color: rgb(92, 91, 91);
+}
+
+.reference {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 1rem;
+  }
+  .notification__comment-image {
+    display: block;
+    position: initial;
+    margin-top: 1rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
